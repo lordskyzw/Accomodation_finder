@@ -26,7 +26,7 @@ create table Owner_details(
 $sql .= "
 create table area(
 	pincode varchar(6),
-	No_of_pgs int,
+	No_of_pgs null,
 	city varchar(20),
 	no_of_hostels int,
 	locality varchar(20),
@@ -41,6 +41,7 @@ create table Hostel(
 	Type varchar(10),
 	Hostel boolean,
 	Curfew time,
+	Fees int,
 	Phone_number varchar(10),
 	Total_no_of_rooms int,
 	Capacity int,

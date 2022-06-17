@@ -8,7 +8,9 @@
     <!-- Bootstrap CSS -->
     <style>
     body{
-      background-image: url("assets/images/4.jpg");
+      background-image: url("assets/images/IMG_4533.jpg");
+      background-repeat:none;
+      background-size: cover;
     }
     </style>
 
@@ -16,31 +18,44 @@
   </head>
   <body class="text-white">
 
-    <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <a class="navbar-brand" href="#"><h1>Accomodation Finder</h1></a>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
+    <header id="main_menu" class="header">
+      <div class="main_menu_bg navbar-fixed-top">
+          <div class="container">
+              <div class="row">
+                  <div class="nave_menu wow fadeInUp" data-wow-duration="1s">
+                      <nav class="navbar navbar-default" id="navmenu">
+                          <div class="container-fluid">
+                              <!-- Brand and toggle get grouped for better mobile display -->
+                              <div class="navbar-header">
+                                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                                      <span class="sr-only">Toggle navigation</span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                      <span class="icon-bar"></span>
+                                  </button>
+                                  <a class="navbar-brand" href="#"><h1 style = "color: white; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">UTOPIA</h1></a>
+                              </div>
 
-        <form class="form-inline mt-2 mt-md-0 mr-auto">
+                              <!-- Collect the nav links, forms, and other content for toggling -->
+                              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-        </form>
-        <ul class="navbar-nav " style="margin-right:10%">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html"><h4>Home</h4><span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="search.php"><h4>Search</h4><span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#"><h4>Registration</h4><span class="sr-only">(current)</span></a>
-          </li>
-        </ul>
+                                  <ul class="nav navbar-nav navbar-right">
+                                      <li class="active"><a href="#home">Home</a></li>
+                                      <li><a href="form.html">Register hostel</a></li>
+                                      <li><a href="search.html">Search</a></li>
+                                      <!-- <li><a href="#clients">About us</a></li> -->
+
+                                  </ul>
+                              </div>
+                          </div>
+                      </nav>
+                  </div>
+              </div>
+
+          </div>
 
       </div>
-    </nav>
-
+  </header>
 <br /><br /><br/>
 
 </br/>
@@ -85,7 +100,10 @@
                 <label for="curfew">Curfew Time :</label>
                 <input class="form-control" type="time" name="curfew" id="curfew"/>
               </div>
-              
+              <div class="form-group">
+                <label for="fees">Fees :</label>
+                <input class="form-control" type="number" name="fees" id="fees"/>
+              </div>
               <div class="form-group">
                 <span for="pincode">Pincode :</span>
                 <input class="form-control" type="text" id="pincode" name="pincode" />
@@ -97,7 +115,7 @@
               </div>
           </div>
         </div>
-        <div class="row">
+        <!--<div class="row">
           <h3>Room Details :</h3>
         </div>
         <hr />
@@ -114,15 +132,15 @@
               </select>
             </div>
           </div>
-        </div>
+        </div>-->
         <hr />
 
-        <div class="row">
+       <!-- <div class="row">
           <div class="col-lg-6 offset-lg-3 col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-xs-10 offset-xs-1">
             <div id="room">
             </div>
           </div>
-        </div>
+        </div>-->
 
        
         <div class="row">

@@ -31,7 +31,7 @@
             <a class="nav-link" href="index.html"><h4>Home</h4><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="search.php"><h4>Search</h4><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="search.html"><h4>Search</h4><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="form.html"><h4>Registration</h4><span class="sr-only">(current)</span></a>
@@ -65,9 +65,6 @@
       <th>Curfew</th>
       <th>Capacity</th>
       <th>Room Capacity</th>
-      <th>Number of Meals</th>
-      <th>Mess Fees</th>
-      <th>Mess Capacity</th>
       <th>Owner Name</th>
       <th>Phone Number</th>
       <th>Email</th>
@@ -86,9 +83,6 @@
     echo "<td>".$row['Curfew']."</td>";
     echo "<td>".$row['Capacity']."</td>";
     echo "<td>".$row['Room_capacity']."</td>";
-    echo "<td>".$row['no_of_meals']."</td>";
-    echo "<td>".$row['Mess_fees']."</td>";
-    echo "<td>".$row['Mess_capacity']."</td>";
     echo "<td>".$row['Owner_name']."</td>";
     echo "<td>".$row['Phone_number']."</td>";
     echo "<td>".$row['Email_ID']."</td>";

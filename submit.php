@@ -26,7 +26,7 @@
             <a class="nav-link" href="index.html"><h4>Home</h4><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item ">
-            <a class="nav-link" href="search.php"><h4>Search</h4><span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="search.html"><h4>Search</h4><span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="form.html"><h4>Registration</h4><span class="sr-only">(current)</span></a>
@@ -75,8 +75,9 @@ Pincode,
 Type,
 Hostel,
 Curfew,
+Fees,
 Phone_number,
-Capacity) values('".$_POST["name"]."','".$_POST["pincode"]."','".$_POST["type"]."','".$_POST["hostel_pg"]."','".$_POST["curfew"]."','".$_POST["owner_phone"]."','".$_POST["capacity"]."');";
+Capacity) values('".$_POST["name"]."','".$_POST["pincode"]."','".$_POST["type"]."','".$_POST["hostel_pg"]."','".$_POST["curfew"]."','".$_POST["fees"].'",'".$_POST["owner_phone"]."','".$_POST["capacity"]."');";
 
 
 if($conn->query($sql)){

@@ -12,12 +12,12 @@ html,
 body {
     background-color: #fff;
     font-size: 15px;
-    color: #565656;
+    color: #fff;
     width: 100%;
     padding: 0;
     margin-left: 0;
     margin-right: 0;
-    font-family: 'roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 300;
 }
 /*==========================================
@@ -550,7 +550,7 @@ input:-ms-input-placeholder {
 	text-transform:uppercase;
 }
 .main_menu_bg .navbar-default .navbar-nav>.active>a{
-    color: #e84c3d;
+    color: hwb(6 1% 87%);
     background-color: transparent;
     border-bottom: 1px solid #FFF;
     margin-bottom: -1px;
@@ -612,10 +612,10 @@ input:-ms-input-placeholder {
     overflow: hidden;
 }
 .register .single_login{
-    background: #21424a;
+    background: #02630a;
 }
 .single_register{
-    background: #2fac6c;
+    background: #3d3325;
     transform: skewX(-20deg);
 }
 .single_register a{

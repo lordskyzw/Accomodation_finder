@@ -15,7 +15,7 @@
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#"><h1>Accomodation Finder</h1></a>
+      <a class="navbar-brand" href="#"><h1>utopia</h1></a>
       <div class="collapse navbar-collapse" id="navbarCollapse">
 
         <form class="form-inline mt-2 mt-md-0 mr-auto">

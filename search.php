@@ -1,3 +1,15 @@
+<?php
+session_start();
+if (isset($_SESSION['uid']))
+{
+    include 'dbconnect.php';
+    $uid = $_SESSION['uid'];
+    
+}
+else{
+
+}
+?>
 <html lang="en">
   <head>
     <title>Tarmica's Utopia</title>    <!-- Required meta tags -->

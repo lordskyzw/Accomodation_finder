@@ -1,25 +1,14 @@
 <?php
 
-function OpenCon()
-{
 $dbname = "utopia";
 $username = "root";
 $password = "";
 $servername ="localhost";
-$conn = new mysqli($servername,$username,$password,$dbname);
+$conn = mysqli_connect($servername,$username,$password,$dbname);
 
-if( $conn->connect_error)
+if( $conn == false)
 {
-	die("connection failier". $conn->connect_error);
-}
-
-return $conn;
-
-}
-
-function CloseCon()
-{
-	$conn -> close();
+	echo "connection failure";
 }
 
 ?>

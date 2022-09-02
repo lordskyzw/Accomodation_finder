@@ -1,11 +1,14 @@
 <?php
+session_start();
+if (isset($_SESSION['uid']))
+{
+    include 'dbconnect.php';
+    $uid = $_SESSION['uid'];
+    
+}
+else{
 
-include 'dbconnect.php';
-$conn = OpenCon();
-echo "Connected Succefully";
-
-CloseCon($conn);
-
+}
 ?>
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
@@ -15,7 +18,7 @@ CloseCon($conn);
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Tarmica's Utopia</title>
+        <title>Utopia</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon-bar" href="assets/images/IMG_2855.jpg">

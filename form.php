@@ -1,11 +1,14 @@
 <?php
+session_start();
+if (isset($_SESSION['uid']))
+{
+    include 'dbconnect.php';
+    $uid = $_SESSION['uid'];
+    
+}
+else{
 
-include 'dbconnect.php';
-$conn = OpenCon();
-echo "Connected Succefully";
-
-CloseCon($conn);
-
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -180,7 +183,7 @@ CloseCon($conn);
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script scr="javascript/first.js" type="text/javascript"></script>
 
-
+  <script>
     function checkPhone(sel){
       var value = document.getElementById('owner_phone').value;
 

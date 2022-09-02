@@ -2,7 +2,7 @@
 
 function OpenCon()
 {
-$dbname = "hostels";
+$dbname = "utopia";
 $username = "root";
 $password = "";
 $servername ="localhost";

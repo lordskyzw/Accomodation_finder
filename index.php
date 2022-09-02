@@ -68,8 +68,8 @@ CloseCon($conn);
 
                                         <ul class="nav navbar-nav navbar-right">
                                             <li class="active"><a href="#home">Home</a></li>
-                                            <li><a href="form.html">Register hostel</a></li>
-                                            <li><a href="search.html">Search</a></li>
+                                            <li><a href="form.php">Register House</a></li>
+                                            <li><a href="search.php">Search</a></li>
                                             <!-- <li><a href="#clients">About us</a></li> -->
 
                                         </ul>
@@ -119,7 +119,7 @@ CloseCon($conn);
                 <img src="assets/images/1.jpg" alt="Los Angeles" style="width:100%;height:640px;">
                 <div class="carousel-caption">
                   <h3>Hey, there !!</h3>
-                  <p style="color:white;">find the perfect hostel !</p>
+                  <p style="color:white;">find the perfect boarding house !</p>
                 </div>
               </div>
 
@@ -129,7 +129,7 @@ CloseCon($conn);
                 </div>
                 <div class="carousel-caption">
                   <h3>Register</h3>
-                  <p style="color:white;">Register your hostel if your hostel is not listed..</p>
+                  <p style="color:white;">Register your house if your place is not listed..</p>
                 </div>
               </div>
 
@@ -137,7 +137,7 @@ CloseCon($conn);
                 <img src="assets/images/3.jpg" alt="New York" style="width:100%;height:640px;">
                 <div class="carousel-caption">
                   <h3>Search by area</h3>
-                  <p style="color:white;">Get all the hostels in the area..</p>
+                  <p style="color:white;">Get all the available houses in the area..</p>
                 </div>
               </div>
 
@@ -159,7 +159,7 @@ CloseCon($conn);
                 <div class="row text-center">
                     <div class="col-sm-6 col-xs-6 no-padding">
                         <div class="single_register single_login">
-                            <a href="search.html">Search for a Hostel</a>
+                            <a href="search.php">Search for a House</a>
                         </div>
                     </div>
                     <div class="col-sm-6 col-xs-6 no-padding">

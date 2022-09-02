@@ -1,7 +1,16 @@
+<?php
+
+include 'dbconnect.php';
+$conn = OpenCon();
+echo "Connected Succefully";
+
+CloseCon($conn);
+
+?>
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Tarmica's Utopia</title>    <!-- Required meta tags -->
+    <title>Utopia</title>    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -63,7 +72,7 @@
     <div class="container">
       <form action = "submit.php" method = "post">
         <div class="row">
-          <h3>Hostel Details :</h3>
+          <h3>House Details :</h3>
         </div>
         <hr />
         <div class="row">
@@ -82,24 +91,10 @@
                 </select>
               </div>
               <div class="form-group">
-                <div class="row">
-                  
-                  <div class="col-sm-6">
-                    <label class="radio-inline">
-                      Hostel     :      <input type="radio" name="hostel_pg" value = '1'/>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
                 <span for="capacity">Capacity :</span>
                 <input class="form-control" type="number" min="1" id="lname" name="capacity" />
               </div>
-
-              <div class="form-group">
-                <label for="curfew">Curfew Time :</label>
-                <input class="form-control" type="time" name="curfew" id="curfew"/>
-              </div>
+              
               <div class="form-group">
                 <label for="fees">Fees :</label>
                 <input class="form-control" type="number" name="fees" id="fees"/>
@@ -184,129 +179,7 @@
     <!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script scr="javascript/first.js" type="text/javascript"></script>
-    <script>
-    var no_of_rooms = 0;
 
-
-
-    function addroomforms(sel){
-      // var value1 = document.getElementById('no').value;
-      var value1 = sel.options[sel.selectedIndex].text;
-      for(var i=0;i<value1;i++){
-        addRoom();
-      }
-      // var va = document.getElementById('no').value = value1;
-    }
-
-    function addRoom(){
-      no_of_rooms++;
-      // document.getElementById('no').innerHTML = "Types of Rooms ::" + no_of_rooms;
-      var main = document.getElementById('room');
-
-      var second = document.createElement('div');
-      second.className = "form-group";
-      var span = document.createElement("span");
-      var t = document.createTextNode("Room Capacity :");
-      span.appendChild(t);
-      var input = document.createElement("input");
-      input.name = "capacity" + no_of_rooms;
-      input.className = "form-control";
-      input.type = "number";
-      input.id = "capacity" + no_of_rooms;
-      second.appendChild(span);
-      second.appendChild(input);
-
-      var third = document.createElement('div');
-      third.className = "form-group";
-      var span = document.createElement("span");
-      var t = document.createTextNode("No of Rooms :");
-      span.appendChild(t);
-      var input = document.createElement("input");
-      input.type= "number";
-      input.className = "form-control";
-      input.name = "no_of_rooms" + no_of_rooms;
-      input.id = "no_of_rooms" + no_of_rooms;
-      third.appendChild(span);
-      third.appendChild(input);
-
-      var fourth = document.createElement('div');
-      fourth.className = "form-group";
-      var span = document.createElement("span");
-      var t = document.createTextNode("Fees :");
-      span.appendChild(t);
-      var input = document.createElement("input");
-      input.className = "form-control";
-      input.type = "number";
-      input.min = "100";
-      input.name = "fees" + no_of_rooms;
-      input.id = "fees" + no_of_rooms;
-      fourth.appendChild(span);
-      fourth.appendChild(input);
-
-      var fifth = document.createElement('div');
-      fifth.className = "form-group";
-      var label = document.createElement("label");
-      var t = document.createTextNode("Wifi : ");
-      label.appendChild(t);
-      var input = document.createElement("input");
-      input.type ="checkbox";
-      input.value = '1';
-      input.name = "wifi" + no_of_rooms;
-      input.id = "wifi" + no_of_rooms;
-      label.appendChild(input);
-      fifth.appendChild(label);
-      // fifth.appendChild(input);
-
-      var sixth = document.createElement('div');
-      sixth.className = "form-group";
-      var label = document.createElement("label");
-      var t = document.createTextNode("AC : ");
-      label.appendChild(t);
-      var input = document.createElement("input");
-      input.type ="checkbox";
-      input.name = "ac" + no_of_rooms;
-      input.value = '1';
-      input.id = "ac" + no_of_rooms;
-      label.appendChild(input);
-      sixth.appendChild(label);
-
-      var seven = document.createElement('div');
-      seven.className = "form-group";
-      var label = document.createElement("label");
-      var t = document.createTextNode("Attached Bathroom : ");
-      label.appendChild(t);
-      var input = document.createElement("input");
-      input.type ="checkbox";
-      input.name = "bathroom" + no_of_rooms;
-      input.value = '1';
-      input.id = "bathroom" + no_of_rooms;
-      label.appendChild(input);
-      seven.appendChild(label);
-
-      main.appendChild(second);
-      main.appendChild(third);
-      main.appendChild(fourth);
-      main.appendChild(fifth);
-      main.appendChild(sixth);
-      main.appendChild(seven);
-      main.appendChild(document.createElement('hr'));
-    }
-
-
-
-    // $(document).ready(function() {
-    //    $('#sub').click(function() {
-    //       $.ajax({
-    //          url: 'submit.php',
-    //          type: "POST",
-    //          dataType: 'json',
-    //          data: { 'no' : no_of_rooms },
-    //          error: function(XMLHttpRequest, textStatus, errorThrown) {
-    //             //case error
-    //           }
-    //        });
-    //     });
-    // });
 
     function checkPhone(sel){
       var value = document.getElementById('owner_phone').value;

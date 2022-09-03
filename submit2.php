@@ -48,14 +48,13 @@
 <?php
   include 'dbconnect.php';
 
-$ac = isset($_POST['ac']) ? $_POST['ac'] : '0' ;
-$bathroom = isset($_POST['bathroom']) ? $_POST['bathroom'] : '0' ;
+
 $wifi = isset($_POST['wifi']) ? $_POST['wifi'] : '0' ;
 
-  $sql = "select Room_capacity,Fees,H_name,Type,Curfew,Owner_name,Phone_number,Email_ID,Capacity,Total_no_of_rooms,no_of_meals,Mess_fees,Mess_capacity
+  $sql = "select Room_capacity,Fees,H_name,Type,Owner_name,Phone_number,Email_ID,Capacity,Total_no_of_rooms,
           from Hostel natural join Room_types natural join mess natural join Owner_details
-          where AC =".$ac." and Wifi =".$wifi." and Attached_Bathroom =".$bathroom." and Fees <=".$_POST['lessfees']."
-          and Hostel =".$_POST['hostel']." and Veg = ".$_POST['veg']." and Type = '".$_POST['type']."';";
+          where Wifi =".$wifi." and Fees <=".$_POST['lessfees']."
+          and Hostel =".$_POST['hostel']." and Type = '".$_POST['type']."';";
 
   $result =  $conn->query($sql);
   // echo $_POST['type'];
@@ -67,12 +66,8 @@ $wifi = isset($_POST['wifi']) ? $_POST['wifi'] : '0' ;
       <th>Hostel Name</th>
       <th>Type</th>
       <th>Fees</th>
-      <th>Curfew</th>
       <th>Capacity</th>
       <th>Room Capacity</th>
-      <th>Number of Meals</th>
-      <th>Mess Fees</th>
-      <th>Mess Capacity</th>
       <th>Owner Name</th>
       <th>Phone Number</th>
       <th>Email</th>
@@ -88,12 +83,8 @@ $wifi = isset($_POST['wifi']) ? $_POST['wifi'] : '0' ;
     echo "<td>".$row['H_name']."</td>";
     echo "<td>".$row['Type']."</td>";
     echo "<td>".$row['Fees']."</td>";
-    echo "<td>".$row['Curfew']."</td>";
     echo "<td>".$row['Capacity']."</td>";
     echo "<td>".$row['Room_capacity']."</td>";
-    echo "<td>".$row['no_of_meals']."</td>";
-    echo "<td>".$row['Mess_fees']."</td>";
-    echo "<td>".$row['Mess_capacity']."</td>";
     echo "<td>".$row['Owner_name']."</td>";
     echo "<td>".$row['Phone_number']."</td>";
     echo "<td>".$row['Email_ID']."</td>";

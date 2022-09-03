@@ -48,8 +48,8 @@
 <?php
   include 'dbconnect.php';
 
-  $sql = "select Room_capacity,Fees,H_name,Type,Curfew,Owner_name,Phone_number,Email_ID,Capacity,Total_no_of_rooms,no_of_meals,Mess_fees,Mess_capacity
-          from Hostel natural join Room_types natural join mess natural join Owner_details natural join area
+  $sql = "select Room_capacity,Fees,H_name,Type,Owner_name,Phone_number,Email_ID,Capacity
+          from Hostel natural join Room_types natural join natural join Owner_details natural join area
           where locality ='".$_POST['locality']."';";
 
   $result =  $conn->query($sql);
@@ -62,7 +62,7 @@
       <th>Hostel Name</th>
       <th>Type</th>
       <th>Fees</th>
-      <th>Curfew</th>
+      
       <th>Capacity</th>
       <th>Room Capacity</th>
       <th>Owner Name</th>
@@ -80,7 +80,7 @@
     echo "<td>".$row['H_name']."</td>";
     echo "<td>".$row['Type']."</td>";
     echo "<td>".$row['Fees']."</td>";
-    echo "<td>".$row['Curfew']."</td>";
+    
     echo "<td>".$row['Capacity']."</td>";
     echo "<td>".$row['Room_capacity']."</td>";
     echo "<td>".$row['Owner_name']."</td>";

@@ -70,14 +70,7 @@ $sql = "insert into Owner_details values('".$_POST["owner_name"]."','".$_POST["o
 
 $sql1 = "select pincode from area";
 $sql2 = "insert into area values('".$_POST["pincode"]."','".$nullvalue."','".$_POST["city"]."','".$nullvalue."','".$_POST["locality"]."');";
-$sql3 = "insert into Hostel(H_name,
-Pincode,
-Type,
-Hostel,
-Curfew,
-Fees,
-Phone_number,
-Capacity) values('".$_POST["name"]."','".$_POST["pincode"]."','".$_POST["type"]."','".$_POST["hostel_pg"]."','".$_POST["curfew"]."','".$_POST["fees"].'",'".$_POST["owner_phone"]."','".$_POST["capacity"]."');";
+$sql3 = "insert into Hostel(H_name, Pincode, Type, Fees, Phone_number, Capacity) values('".$_POST["name"]."','".$_POST["pincode"]."','".$_POST["type"]."','".$_POST["fees"]."', '".$_POST["owner_phone"]"','".$_POST["capacity"]"');";
 
 
 if($conn->query($sql)){
@@ -127,16 +120,6 @@ if ($conn->query($sql3) === TRUE) {
     // echo "the last is ". $last_id;
 }
 
-$sql4 = "insert into mess(no_of_meals,Mess_fees,Mess_capacity,Veg,ID) values('".$_POST["no_of_meals"]."','".$_POST["mess_fees"]."','".$_POST["mess_capacity"]."','".$_POST["veg_nonveg"]."','".$last_id."');";
-
-if($conn->query($sql4)){
-  // echo "inserted";
-	$inserted++;
-
-}
-else{
-  echo "error".$conn->error;
-}
 
 
 for($x = 1; $x <= $_POST["nos"];$x++){
@@ -144,14 +127,12 @@ for($x = 1; $x <= $_POST["nos"];$x++){
 // 	if($_POST["ac".(string)$x] == 'yes' ){
 // 		$val = true;
 // 	}
-$checkbox = isset($_POST["ac".(string)$x]) ? $_POST["ac".(string)$x] : '0' ;
-$checkbox1 = isset($_POST["bathroom".(string)$x]) ? $_POST["bathroom".(string)$x] : '0' ;
+
 $checkbox2 = isset($_POST["wifi".(string)$x]) ? $_POST["wifi".(string)$x] : '0' ;
 
 
 $sql5 = "insert into Room_types
-values('".$checkbox1."'
-,'".$checkbox."','".$_POST["capacity".(string)$x]."','".$_POST["fees".(string)$x]."','".$checkbox2."','".$_POST["no_of_rooms".(string)$x]."','".$last_id."');";
+values('".$_POST["capacity".(string)$x]."','".$_POST["fees".(string)$x]."','".$checkbox2."','".$_POST["no_of_rooms".(string)$x]."','".$last_id."');";
 
 if($conn->query($sql5)){
   // echo "inserted";
